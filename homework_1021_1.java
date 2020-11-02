@@ -8,9 +8,11 @@ public class homework_1021_1 {
         input.close();
     }
     public static void reverse(int number) {
-        while (number != 0) {
-            int temp = number % 10;
-            System.out.print(temp);
+        while (number % 10 == 0) {
+            number /= 10;
+        }
+        while (number > 0) {
+            System.out.print(number % 10);
             number /= 10;
         }
     }

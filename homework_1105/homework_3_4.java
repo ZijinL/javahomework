@@ -77,5 +77,4 @@ class Course implements Cloneable {
             return null;
         }
     }
-    
-  }
+}

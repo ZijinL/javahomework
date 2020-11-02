@@ -9,6 +9,7 @@ public class homework_1021_5 {
                 test[i][j] = input.nextDouble();
             }
         }
+        input.close();
         System.out.println("Sum of the elements in the major diagonal is " + sumMajorDiagonal(test));
     }
     public static double sumMajorDiagonal (double[][]m) {

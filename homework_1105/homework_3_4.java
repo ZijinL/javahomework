@@ -69,7 +69,7 @@ class Course implements Cloneable {
         try {
             Course newCourse = (Course) super.clone();
             newCourse.students = new String[100];
-            System.arraycopy(students, 0, newCourse.students, 0, 100); 
+            System.arraycopy(students, 0, newCourse.students, 0, 100); // array deepcopy
             newCourse.numberOfStudents = numberOfStudents;
             return newCourse;
         }

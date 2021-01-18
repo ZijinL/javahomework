@@ -937,7 +937,16 @@ public static void init_hash(TreeNode root, HashMap<Integer, TreeNode> hashtable
 
 ### DFS
 
-```java
+* 最简单，最容易理解，最直观，最快
 
+```java
+public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    if (root == null || root == q || root == p) return root;
+    TreeNode left = lowestCommonAncestor(root.left, p, q);
+    TreeNode right = lowestCommonAncestor(root.right, p, q);
+    if (left == null) return right;
+    if (right == null) return left;
+    return root;
+}
 ```
 
